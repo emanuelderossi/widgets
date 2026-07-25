@@ -62,104 +62,230 @@ class _MyHomePageState extends State<MyHomePage> {
   //   });
   // }
 
+  //   @override
+  //   Widget build(BuildContext context) {
+  //     return Scaffold(
+  //       appBar: AppBar(
+  //         backgroundColor: Colors.black,
+  //         foregroundColor: Colors.white,
+  //         leading: const Icon(Icons.arrow_back),
+  //         title: Text('Meu Timão'),
+  //         actions: [
+  //           Padding(padding: const EdgeInsets.all(15.0), child: Icon(Icons.menu)),
+  //         ],
+  //       ),
+
+  //       body: LayoutBuilder(
+  //         builder: (BuildContext context, BoxConstraints constraints) {
+  //           return SingleChildScrollView(
+  //             child: ConstrainedBox(
+  //               constraints: BoxConstraints(minHeight: constraints.maxHeight),
+  //               child: Column(
+  //                 mainAxisSize: MainAxisSize.min,
+  //                 spacing: 10,
+
+  //                 mainAxisAlignment: MainAxisAlignment.center,
+  //                 children: [
+  //                   Container(
+  //                     // alignment: Alignment.bottomCenter,
+  //                     decoration: BoxDecoration(
+  //                       color: Colors.black,
+  //                       borderRadius: BorderRadius.circular(50),
+  //                     ),
+  //                     width: 50,
+  //                     height: 50,
+  //                     child: const Icon(
+  //                       Icons.person,
+  //                       color: Colors.white,
+  //                       size: 25,
+  //                     ),
+  //                   ),
+  //                   const Text(
+  //                     'Profile',
+  //                     style: TextStyle(fontWeight: FontWeight.bold),
+  //                   ),
+
+  //                   Column(
+  //                     children: [
+  //                       Container(
+  //                         decoration: BoxDecoration(
+  //                           color: Colors.black,
+  //                           borderRadius: BorderRadius.circular(50),
+  //                         ),
+  //                         width: 50,
+  //                         height: 50,
+  //                         child: const Icon(
+  //                           Icons.attach_money,
+  //                           color: Colors.white,
+  //                           size: 25,
+  //                         ),
+  //                       ),
+  //                       const SizedBox(height: 8),
+  //                       const Text(
+  //                         'Payments',
+  //                         style: TextStyle(fontWeight: FontWeight.bold),
+  //                       ),
+  //                     ],
+  //                   ),
+
+  //                   Column(
+  //                     children: [
+  //                       Container(
+  //                         decoration: BoxDecoration(
+  //                           color: Colors.black,
+  //                           borderRadius: BorderRadius.circular(50),
+  //                         ),
+  //                         width: 50,
+  //                         height: 50,
+  //                         child: const Icon(
+  //                           Icons.settings,
+  //                           color: Colors.white,
+  //                           size: 25,
+  //                         ),
+  //                       ),
+  //                       const SizedBox(height: 8),
+  //                       const Text(
+  //                         'Settings',
+  //                         style: TextStyle(fontWeight: FontWeight.bold),
+  //                       ),
+  //                     ],
+  //                   ),
+  //                   Row(
+  //                     mainAxisAlignment: MainAxisAlignment.center,
+  //                     crossAxisAlignment: CrossAxisAlignment.center,
+  //                     children: [
+  //                       ElevatedButton(
+  //                         onPressed: () {},
+  //                         style: ElevatedButton.styleFrom(
+  //                           backgroundColor: Colors.black,
+  //                           foregroundColor: Colors.white,
+  //                         ),
+  //                         child: const Text('Salvar'),
+  //                       ),
+  //                       SizedBox(width: 20),
+  //                       ElevatedButton(
+  //                         onPressed: () {},
+  //                         style: ElevatedButton.styleFrom(
+  //                           backgroundColor: Colors.black,
+  //                           foregroundColor: Colors.white,
+  //                         ),
+  //                         child: Text('Cancelar'),
+  //                       ),
+  //                     ],
+  //                   ),
+  //                 ],
+  //               ),
+  //             ),
+  //           );
+  //         },
+  //       ),
+  //       bottomNavigationBar: BottomNavigationBar(
+  //         items: const [
+  //           BottomNavigationBarItem(
+  //             icon: Icon(Icons.home, color: Colors.black),
+  //             label: 'Home',
+  //           ),
+  //           BottomNavigationBarItem(
+  //             icon: Icon(Icons.favorite, color: Colors.black),
+  //             label: 'Favoritos',
+  //           ),
+  //         ],
+  //       ),
+  //     );
+  //   }
+  // }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        foregroundColor: Colors.white,
-        leading: const Icon(Icons.arrow_back),
-        title: Text('Meu Timão'),
-        actions: [
-          Padding(padding: const EdgeInsets.all(15.0), child: Icon(Icons.menu)),
-        ],
-      ),
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Color(0xE0E0E0E0)),
+            ),
+            padding: EdgeInsets.all(18),
+            margin: EdgeInsets.all(18),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.workspace_premium, color: Color(0xFF146C43)),
+                    SizedBox(width: 12),
+                    Text(
+                      'Plano Premium',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                      ),
+                    ),
+                    Spacer(),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.lightGreenAccent,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 4,
+                      ),
+                      child: Text(
+                        'Ativo',
+                        style: TextStyle(
+                          color: Colors.green,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
 
-      body: Center(
-        child: Column(
-          spacing: 50,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Column(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  width: 50,
-                  height: 50,
-                  child: const Icon(
-                    Icons.person,
-                    color: Colors.white,
-                    size: 25,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                const Text(
-                  'Profile',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            Column(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  width: 50,
-                  height: 50,
-                  child: const Icon(
-                    Icons.attach_money,
-                    color: Colors.white,
-                    size: 25,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                const Text(
-                  'Payments',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                SizedBox(height: 4),
+
+                Text('Armazenamento utilizado'),
+
+                SizedBox(height: 12),
+
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(child: Container()),
+
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 8),
+                          child: Container(
+                            width: 35,
+                            height: 35,
+                            decoration: BoxDecoration(
+                              color: Colors.green,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: Center(child: Icon(Icons.person_outline)),
+                          ),
+                        ),
+
+                        Container(
+                          width: 35,
+                          height: 35,
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: Center(child: Icon(Icons.settings)),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ],
             ),
-            Column(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  width: 50,
-                  height: 50,
-                  child: const Icon(
-                    Icons.settings,
-                    color: Colors.white,
-                    size: 25,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                const Text(
-                  'Settings',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ],
+          ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Colors.black),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite, color: Colors.black),
-            label: 'Favoritos',
-          ),
-        ],
       ),
     );
   }
